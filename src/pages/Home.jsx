@@ -1,14 +1,3 @@
-import { useContext, useEffect, useRef, useState } from "react";
-// import leftCoin from "../assets/animations/coin-left.gif";
-// import rightCoin from "../assets/animations/coin-right.gif";
-import ReactDOM from "react-dom/client";
-import CoinAnimation from "../components/CoinAnimation/CoinAnimation";
-import { AppContext } from "../App";
-import { API_BASE_URL, CHAT_ID } from "../config";
-import { toast } from "react-toastify";
-import axios from "axios";
-import WalletDialog from "../components/Dialogs/WalletDialog";
-
 const Home = () => {
   
   return (
@@ -45,7 +34,7 @@ const Home = () => {
         <img src="/assets/imgs/main-img.png" />
       </div>
       <div id="loading_pan" className="px-6 py-2">
-        <div className="border-primary-color p-4 bg-neutral-400 bg-opacity-35 rounded-[20px]">
+        <div className="border-primary-color p-4 bg-neutral-9500 backdrop-blur-md rounded-[20px]">
           <div id="battery" className="flex justify-between items-center font-bold pb-[10px]">
             <div><img src="/assets/svgs/battery.svg" /></div>
             <div className="">

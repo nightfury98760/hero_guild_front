@@ -30,78 +30,7 @@ function App() {
   const [userInfo, setUserInfo] = useState({});
   const [token, setToken] = useState(null);
 
-  const getAuthandUserInfo = async (webAppUserInfo) => {
-    console.log("---------------UserID: ", webAppUserInfo.id);
-    try {
-      const chatId = webAppUserInfo.id;
-      if (chatId == null || chatId == undefined) {
-        return;
-      }
-      const { data } = await axios.post(
-        `${API_BASE_URL}/user/login`,
-        {
-          webAppUserInfo: webAppUserInfo,
-        }
-      );
-      console.log(data);
-      if (data.token) {
-        localStorage.setItem("authorization", data.token);
-        setToken(token);
-      }
-
-      const { data: userinfo } = await axios.get(`${API_BASE_URL}/user/info`, {
-        headers: {
-          Authorization: `bearer ${data.token}`,
-        },
-      });
-      console.log("[Userinfo]", userinfo);
-      if (userinfo.state) setUserInfo(userinfo.data);
-
-      const { data: tasks } = await axios.get(
-        `${API_BASE_URL}/task/list`,
-        {
-          headers: {
-            Authorization: `bearer ${data.token}`,
-          },
-        }
-      );
-      console.log("Tasks", tasks);
-      if (tasks.state) {
-        setTasks(tasks.data);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    // {
-    //   id: 5521963424,
-    //   first_name: "Gallant",
-    //   last_name: "Knight",
-    //   username: "GallantKnight",
-    //   language_code: "en",
-    //   allows_write_to_pm: true
-    // }
-    console.log("-----init data-----", window.Telegram.WebApp.initData);
-
-    if (
-      window.Telegram.WebApp.initData == null ||
-      window.Telegram.WebApp.initData == undefined
-    ) {
-      // Error Handle
-      console.log(
-        "Telegram WebApp InitData is not existed. Please use telegram app."
-      );
-    } else {
-      const params = new URLSearchParams(window.Telegram.WebApp.initData);
-      const user = params.get("user");
-
-      console.log("USER: ", user);
-      getAuthandUserInfo(JSON.parse(decodeURIComponent(user)));
-    }
-  }, []);
-
+  
   useEffect(() => {
     if (
       location.pathname !== "/" &&

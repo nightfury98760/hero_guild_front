@@ -44,6 +44,13 @@
 .bg-primary-color {
   background: linear-gradient(135deg, #EEFF00 0%, #FFAA00 50.81%, #FF5E00 100%);
 }
+
+.bg-primary-color {
+  background: linear-gradient(135deg, #EEFF00 0%, #FFAA00 50.81%, #FF5E00 100%);
+  /* opacity: 0.5; */
+}
+
+
 .text-primary-color {
   background: linear-gradient(135deg, #EEFF00 0%, #FFAA00 50.81%, #FF5E00 100%);
   -webkit-background-clip: text; /* Background clip for text */
@@ -77,6 +84,30 @@
   z-index: -1; /* Position the gradient behind the content */
 }
 
+.border-primary-color-full {
+  position: relative;
+  border-radius: 800px; /* Adjust the border radius */
+  z-index: 1; /* Ensure the content is above the pseudo-element */
+}
+
+.border-primary-color-full::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 800px; /* Match the border radius */
+  padding: 1px; /* Adjust the thickness of the border */
+  background: linear-gradient(135deg, #EEFF00 0%, #FFAA00 50.81%, #FF5E00 100%);
+  -webkit-mask: 
+    linear-gradient(gray 0 0) content-box, 
+    linear-gradient(gray 0 0); /* Create space inside the border */
+  -webkit-mask-composite: destination-out;
+          mask-composite: exclude; /* Ensure the gradient is only applied to the border */
+  z-index: -1; /* Position the gradient behind the content */
+}
+
 .montserrat {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -86,4 +117,21 @@
 .poppins {
   font-family: "Poppins", sans-serif;
   font-style: normal;
+}
+
+.highscore-table th, td{
+  padding: 8px 20px;
+  border-bottom: 1px solid gray;
+}
+
+.highscore-table{
+  padding: 0 14px;
+}
+
+.highscore-table th, td{
+  text-align: left;
+}
+
+.highscore-ellipse {
+  background: linear-gradient(135deg, #EEFF00 0%, #FFAA00 50.81%, #FF5E00 100%);
 }

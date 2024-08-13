@@ -61,7 +61,7 @@ export default function Modal(props) {
     };
 
     return (
-        <div className={`${isOpen ? "flex" : "hidden"} fixed top-0 left-0 w-screen h-screen bg-transparent flex flex-row items-center justify-center z-[999] ${props.className ? props.className : ""}`}>
+        <div className={`${isOpen ? "flex" : "hidden"} fixed top-0 left-0 w-screen h-screen backdrop-blur-sm flex flex-row items-center justify-center z-[999] ${props.className ? props.className : ""}`}>
             <div className="fixed top-0 left-0 w-screen h-screen bg-[#00000080]" onClick={() => { if (props.onClose) props.onClose(); }} />
             <div className="fixed left-0 bottom-0">
                 <AnimatedDiv className="w-full h-full rounded-xl" type={isCloseStarted ? AnimType.HIDE : AnimType.APPEAR}>
