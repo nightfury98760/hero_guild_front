@@ -22,14 +22,14 @@ const Friends = () => {
         </div>
       </div>
 
-      <div className="border-primary-color flex px-[16px] py-[12px] justify-between montserrat items-center">
+      { friends.length > 0 && <div className="border-primary-color flex px-[16px] py-[12px] justify-between montserrat items-center">
         <div className="text-[14px] -tracking-[1px] font-bold">YOUR REFERRAL REWARD</div>
         <div className="flex text-[12px] gap-x-1">
           <img src="/assets/svgs/golden_small.svg" />
           <div className="">2,500,000</div>
           <img src="/assets/svgs/arrow-right.svg" />
         </div>
-      </div>
+      </div> }
 
       <div className="flex justify-between">
         <div className="flex gap-x-2">
@@ -38,11 +38,35 @@ const Friends = () => {
         </div>
         <img src="/assets/svgs/recycle.svg" />
       </div>
-
-      <div className="flex flex-col bg-zinc-900 backdrop-blur-sm bg-opacity-40 h-[192px] p-8 rounded-[16px]">
-        
+      
+      <div className="flex flex-col bg-zinc-900 backdrop-blur-sm items-center justify-center bg-opacity-40 min-h-[192px] gap-y-2 p-2 rounded-[16px] overflow-auto montserrat">
+        {friends.length > 0 ? friends.map(item => (
+          <div className="flex justify-between rounded-[16px] bg-normal-004 p-2">
+            <div className="flex gap-x-1" >
+              <img src={item.avatar} />
+              <span>{item.name}</span>
+            </div>
+            <div className="flex gap-x-1">
+              <img src="/assets/svgs/golden_small.svg" />
+              <span>{item.value}</span>
+            </div>  
+          </div>
+        )) : 
+        <div className="flex text-[12px] text-white opacity-80 items-center">You haven’t invited anyone yet</div>
+        }
       </div>
+
+      <div className="flex justify-between p-4 rounded-[16px] bg-normal-004 montserrat">
+        <div>0x2863Ekscnj56DfcF2</div>
+        <img src="/assets/svgs/copy.svg" />
+      </div>
+
+      <div className="bg-primary-color btn-shadow text-white p-4 rounded-full font-bold montserrat">
+        INVITE A FRIEND
+      </div>
+      <div id="ecllipse" className="h-[120px] absolute w-full left-0 -bottom-10 opacity-30 blur-xl rounded-t-[150px] bg-primary-color -z-10"></div>
     </div>
+    
   );
 };
 export default Friends;
