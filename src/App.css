@@ -136,6 +136,10 @@
   background: linear-gradient(135deg, #EEFF00 0%, #FFAA00 50.81%, #FF5E00 100%);
 }
 
+.bg-normal-002 {
+  background: rgba(255, 255, 255, 0.02);
+}
+
 .bg-normal-004 {
   background: rgba(255, 255, 255, 0.04);
 }

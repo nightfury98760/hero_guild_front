@@ -12,7 +12,7 @@ const Friends = () => {
     <div className="relative flex flex-col h-full pb-24 bg-blue-200 backdrop-blur-sm bg-opacity-20 overflow-auto bg-[url('./assets/imgs/highscore_bg.png')] px-6 gap-y-6">
       <div className="flex justify-start font-bold pt-6 text-white">INVITEFIRENDS</div>
       
-      <div className="backdrop-blur-sm bg-zinc-900 bg-opacity-40 flex flex-col items-start rounded-[20px] p-4 gap-2">
+      <div className="bg-normal-004 flex flex-col items-start rounded-[20px] p-4 gap-2">
         <div className="text-[14px] font-bold">HOW IT'S WORKS?</div>
         <div className="text-[12px] text-left montserrat">
           <span className="font-bold">Bonus 1:</span> Earn 10% for your direct friends referrals and 8% of their referrals
@@ -39,9 +39,10 @@ const Friends = () => {
         <img src="/assets/svgs/recycle.svg" />
       </div>
       
-      <div className="flex flex-col bg-zinc-900 backdrop-blur-sm items-center justify-center bg-opacity-40 min-h-[192px] gap-y-2 p-2 rounded-[16px] overflow-auto montserrat">
+      <div className="flex flex-col items-center justify-center bg-normal-004
+       min-h-[192px] gap-y-2 px-2 rounded-[16px] overflow-auto montserrat">
         {friends.length > 0 ? friends.map(item => (
-          <div className="flex justify-between rounded-[16px] bg-normal-004 p-2">
+          <div className="flex justify-between rounded-[16px] bg-normal-004 p-2 w-full">
             <div className="flex gap-x-1" >
               <img src={item.avatar} />
               <span>{item.name}</span>
