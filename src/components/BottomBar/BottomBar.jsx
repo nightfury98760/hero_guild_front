@@ -18,32 +18,18 @@ const BottomBar = () => {
       <div className="w-full pb-5 flex justify-around py-1">
         <div
           className="flex flex-col items-center justify-center bg-transparent"
-          onClick={() => {
-            navigate("/");
-          }}
+          onClick={() => { navigate("/") }}
         >
-          <img
-            src="/assets/svgs/home.svg"
-            stroke={location.pathname == "/" ? "#FFFFFF" : "#FFFFFF88"}
-          />
-          <div
-            className={`text-[10px] ${
-              location.pathname == "/" ? "text-primary-color" : "#FFFFFF88"
-            }`}
-          >
+          <img src={location.pathname == "/" ? "/assets/svgs/home_a.svg" : "/assets/svgs/home.svg"} />
+          <div className={`text-[10px] ${ location.pathname == "/" ? "text-primary-color" : "#FFFFFF88"}`}>
             Home
           </div>
         </div>
         <div
           className="flex flex-col items-center justify-center bg-transparent"
-          onClick={() => {
-            navigate("/tasks");
-          }}
+          onClick={() => {  navigate("/tasks") }}
         >
-          <img
-            src="/assets/svgs/tasks.svg"
-            stroke={location.pathname == "/tasks" ? "#FFFFFF" : "#FFFFFF88"}
-          />
+          <img src={location.pathname == "/tasks" ? "/assets/svgs/tasks_a.svg" : "/assets/svgs/tasks.svg"} />
           <div
             className={`text-[10px] ${
               location.pathname == "/tasks" ? "#FFFFFF" : "#FFFFFF88"
@@ -58,28 +44,18 @@ const BottomBar = () => {
             navigate("/friends");
           }}
         >
-          <img
-            src="/assets/svgs/friends.svg"
-            stroke={location.pathname == "/friends" ? "#FFFFFF" : "#FFFFFF88"}
-          />
+          <img src={location.pathname == "/friends" ? "/assets/svgs/friends_a.svg" : "/assets/svgs/friends.svg"} />
           <div
-            className={`text-[10px] ${
-              location.pathname == "/friends" ? "#FFFFFF" : "#FFFFFF88"
-            }`}
+            className={`text-[10px] ${ location.pathname == "/friends" ? "#FFFFFF" : "#FFFFFF88"}`}
           >
             Friends
           </div>
         </div>
         <div
           className="flex flex-col items-center justify-center bg-transparent"
-          onClick={() => {
-            navigate("/highscores");
-          }}
+          onClick={() => { navigate("/highscores")}}
         >
-          <img
-            src="/assets/svgs/highscores.svg"
-            stroke={location.pathname == "/highscores" ? "#FFFFFF" : "#FFFFFF88"}
-          />
+          <img src={location.pathname == "/highscores" ? "/assets/svgs/highscores_a.svg" : "/assets/svgs/highscores.svg"} />
           <div
             className={`text-[10px] ${
               location.pathname == "/highscores" ? "#FFFFFF" : "#FFFFFF88"
