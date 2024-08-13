@@ -1,0 +1,26 @@
+.bg-dlg-normal {
+  background-image: url(/assets/imgs/DialogBG.png);
+  background-size: 100% 100%;
+}
+
+.coin-left {
+  position: absolute;
+  bottom: 0;
+  width: 450px;
+  height: 450px;
+  background-image: url(/assets/animations/coin-left.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.coin-right {
+  position: absolute;
+  bottom: 0;
+  width: 450px;
+  height: 450px;
+  background-image: url(/assets/animations/coin-right.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: bounce 2s ease-in-out infinite;
+}

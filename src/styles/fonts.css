@@ -1,0 +1,64 @@
+/* src/styles/fonts.css */
+@font-face {
+  font-family: "CustomFont";
+  src: url("/assets/fonts/Marker\ Notes.otf") format("opentype"),
+    url("/assets/fonts/Marker\ Notes.ttf") format("truetype"),
+    url("/assets/fonts/Marker\ Notes\ Italic.otf") format("opentype"),
+    url("/assets/fonts/Marker\ Notes\ Italic.ttf") format("truetype");
+
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: "CustomFont", sans-serif !important;
+}
+
+.marker-font-white {
+  font-family: "CustomFont", sans-serif;
+  color: #fff4e0;
+  /* -webkit-text-stroke: 1px #361161; */
+  text-shadow: 
+  -1px -1px 0 #361161,  
+   0   -1px 0 #361161,
+   1px -1px 0 #361161,
+   1px  0px 0 #361161,
+   1px  1px 0 #361161,
+   0    1px 0 #361161,
+  -1px  1px 0 #361161,
+  -1px  0   0 #361161;
+  font-weight: bold;
+}
+
+.marker-font-yellow {
+  font-family: "CustomFont", sans-serif;
+  color: #fffa89;
+  /* -webkit-text-stroke: 1px #361161;; */
+  text-shadow: 
+  -1px -1px 0 #361161,  
+   0   -1px 0 #361161,
+   1px -1px 0 #361161,
+   1px  0px 0 #361161,
+   1px  1px 0 #361161,
+   0    1px 0 #361161,
+  -1px  1px 0 #361161,
+  -1px  0   0 #361161;
+  
+  font-weight: bold;
+}
+
+.marker-font-purple {
+  font-family: "CustomFont", sans-serif;
+  color: #7d0ab9;
+  /* -webkit-text-stroke: 1px white; */
+  text-shadow: 
+  -1px -1px 0 white,  
+   0   -1px 0 white,
+   1px -1px 0 white,
+   1px  0px 0 white,
+   1px  1px 0 white,
+   0    1px 0 white,
+  -1px  1px 0 white,
+  -1px  0   0 white;
+  font-weight: bold;
+}
