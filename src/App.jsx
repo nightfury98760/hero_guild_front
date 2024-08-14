@@ -19,12 +19,9 @@ import { THEME, TonConnectUIProvider } from "@tonconnect/ui-react";
 import Home from "./pages/Home";
 import Highscores from './pages/Highscores'
 import Friend from "./pages/Friend";
-<<<<<<< Updated upstream
 import Airdrop from "./pages/Airdrop";
 import Hero from "./pages/Hero";
-=======
 import Task from "./pages/Task";
->>>>>>> Stashed changes
 
 export const AppContext = createContext();
 
@@ -64,12 +61,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/highscores" element={<Highscores />} />
             <Route path="/friends" element={<Friend />} />
-<<<<<<< Updated upstream
             <Route path="/airdrop" element={<Airdrop />} />
             <Route path="/hero" element={<Hero />} />
-=======
             <Route path="/tasks" element={<Task />} />
->>>>>>> Stashed changes
           </Routes>
         </div>
         <div className="absolute z-50 bottom-0 left-0 w-full">
