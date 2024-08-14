@@ -5,9 +5,10 @@ const TaskBarNormal = ({
   price,
   checked = false,
   active,
-  onClick = null,
+  onClick,
   link,
   opacity,
+  showModal
 }) => {
   const [state, setActive] = useState(false)
   useEffect(() => {
@@ -24,14 +25,14 @@ const TaskBarNormal = ({
           ? ""
           : "bg-gradient-to-r from-[#EEFF00] to-[#FF5E00]"
       } `}
-      onClick={() => setSelect(!isSelected)}
+      onClick={showModal}
     >
       <div className="relative flex gap-2 items-center">
         {state && !isSelected && (<div className="absolute top-1 rounded-full w-3 h-3 bg-[#EEFF00]"></div>)}
         <img className="" src={imgUrl} width={32} alt="task-logo">
         </img>
         <div className="flex flex-col gap-1">
-          <div className="text-white text-left font-Poppins font-bold">
+          <div className="text-white text-left font-poppins font-bold">
             {title}
           </div>
           <div className="font-Gilroy text-left flex items-center gap-1">

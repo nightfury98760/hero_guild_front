@@ -45,9 +45,9 @@
   background: linear-gradient(135deg, #EEFF00 0%, #FFAA00 50.81%, #FF5E00 100%);
 }
 
-.bg-primary-color {
+.bg-primary-color-disabled {
   background: linear-gradient(135deg, #EEFF00 0%, #FFAA00 50.81%, #FF5E00 100%);
-  /* opacity: 0.5; */
+  opacity: 0.5;
 }
 
 

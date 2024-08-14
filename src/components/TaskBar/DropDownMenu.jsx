@@ -36,7 +36,7 @@ const Dropdown = ({onSelect}) => {
       <div>
         <button
           onClick={toggleDropdown}
-          className="flex flex-row w-full h-[48px] font-Poppins text-white focus:text-white justify-between rounded-[16px] focus:border-1  focus:border-white  text-left items-center bg-[#FFFFFF0A]"
+          className="flex flex-row w-full h-[48px] font-poppins text-white focus:text-white justify-between rounded-[16px] focus:border-1  focus:border-white  text-left items-center bg-[#FFFFFF0A]"
           aria-haspopup="true"
           aria-expanded={isOpen}
         >
@@ -60,7 +60,7 @@ const Dropdown = ({onSelect}) => {
       </div>
 
       {isOpen && (
-        <div className="absolute my-1.5 py-3 flex flex-row w-full  font-Poppins text-white focus:text-white justify-center rounded-[24px] focus:border-1  focus:border-white items-center bg-gray-600 z-10">
+        <div className="absolute my-1.5 py-3 flex flex-row w-full  font-poppins text-white focus:text-white justify-center rounded-[24px] focus:border-1  focus:border-white items-center bg-gray-600 z-10">
           <div
             className="w-full flex-wrap px-4"
             role="menu"
@@ -73,7 +73,7 @@ const Dropdown = ({onSelect}) => {
                 onClick={() =>
                   handleSelect(option)
                 }
-                className="flex mr-2 my-2 w-full h-[48px] font-Poppins text-[#FFFFFF66] hover:text-white focus:text-white justify-between rounded-[16px] text-left items-center bg-[#FFFFFF0F] "
+                className="flex mr-2 my-2 w-full h-[48px] font-poppins text-[#FFFFFF66] hover:text-white focus:text-white justify-between rounded-[16px] text-left items-center bg-[#FFFFFF0F] "
                 role="menuitem"
               >
                 {option}
