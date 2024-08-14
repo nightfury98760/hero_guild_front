@@ -32,7 +32,7 @@ const BottomBar = () => {
           <img src={location.pathname == "/tasks" ? "/assets/svgs/tasks_a.svg" : "/assets/svgs/tasks.svg"} />
           <div
             className={`text-[10px] ${
-              location.pathname == "/tasks" ? "#FFFFFF" : "#FFFFFF88"
+              location.pathname == "/tasks" ? "text-primary-color" : "#FFFFFF88"
             }`}
           >
             Tasks
@@ -46,7 +46,7 @@ const BottomBar = () => {
         >
           <img src={location.pathname == "/friends" ? "/assets/svgs/friends_a.svg" : "/assets/svgs/friends.svg"} />
           <div
-            className={`text-[10px] ${ location.pathname == "/friends" ? "#FFFFFF" : "#FFFFFF88"}`}
+            className={`text-[10px] ${ location.pathname == "/friends" ? "text-primary-color" : "#FFFFFF88"}`}
           >
             Friends
           </div>
@@ -58,7 +58,7 @@ const BottomBar = () => {
           <img src={location.pathname == "/highscores" ? "/assets/svgs/highscores_a.svg" : "/assets/svgs/highscores.svg"} />
           <div
             className={`text-[10px] ${
-              location.pathname == "/highscores" ? "#FFFFFF" : "#FFFFFF88"
+              location.pathname == "/highscores" ? "text-primary-color" : "#FFFFFF88"
             }`}
           >
             Highscores
@@ -67,16 +67,13 @@ const BottomBar = () => {
         <div
           className="flex flex-col items-center justify-center bg-transparent"
           onClick={() => {
-            navigate("/highscores");
+            navigate("/hero");
           }}
         >
-          <img
-            src="/assets/svgs/hero.svg"
-            stroke={location.pathname == "/highscores" ? "#FFFFFF" : "#FFFFFF88"}
-          />
+          <img src={location.pathname == "/hero" ? "/assets/svgs/hero_a.svg" : "/assets/svgs/hero.svg"} />
           <div
             className={`text-[10px] ${
-              location.pathname == "/highscores" ? "#FFFFFF" : "#FFFFFF88"
+              location.pathname == "/hero" ? "text-primary-color" : "#FFFFFF88"
             }`}
           >
             Hero

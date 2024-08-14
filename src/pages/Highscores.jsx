@@ -98,7 +98,7 @@ const Highscores = () => {
           SHOW MORE
         </div>
       </div>
-      <div id="ecllipse" className="h-[180px] absolute w-full left-0 -bottom-5 opacity-40 blur-xl rounded-t-[150px] bg-primary-color -z-10"></div>
+      <div id="ecllipse" className="h-[180px] absolute w-full left-0 -bottom-5 opacity-40 blur-3xl rounded-t-[150px] bg-primary-color -z-10"></div>
       <HighScoreModal isOpen={showDialog} onClose={() => setShowDialog(false)} keyword={keyword} tab={tab} />
     </div>
   );

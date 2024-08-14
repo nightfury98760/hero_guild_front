@@ -10,7 +10,7 @@ const Friends = () => {
 
   return (
     <div className="relative flex flex-col h-full pb-24 bg-blue-200 backdrop-blur-sm bg-opacity-20 overflow-auto bg-[url('./assets/imgs/highscore_bg.png')] px-6 gap-y-6">
-      <div className="flex justify-start font-bold pt-6 text-white">INVITEFIRENDS</div>
+      <div className="flex justify-start font-bold pt-6 text-white -tracking-[1px]">INVITE FIRENDS</div>
       
       <div className="bg-normal-004 flex flex-col items-start rounded-[20px] p-4 gap-2">
         <div className="text-[14px] font-bold">HOW IT'S WORKS?</div>
@@ -65,7 +65,7 @@ const Friends = () => {
       <div className="bg-primary-color btn-shadow text-white p-4 rounded-full font-bold montserrat">
         INVITE A FRIEND
       </div>
-      <div id="ecllipse" className="h-[120px] absolute w-full left-0 -bottom-10 opacity-30 blur-xl rounded-t-[150px] bg-primary-color -z-10"></div>
+      <div id="ecllipse" className="h-[120px] absolute w-full left-0 -bottom-10 opacity-40 blur-3xl rounded-t-[150px] bg-primary-color -z-10"></div>
     </div>
     
   );

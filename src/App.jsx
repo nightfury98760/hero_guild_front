@@ -19,6 +19,8 @@ import { THEME, TonConnectUIProvider } from "@tonconnect/ui-react";
 import Home from "./pages/Home";
 import Highscores from './pages/Highscores'
 import Friend from "./pages/Friend";
+import Airdrop from "./pages/Airdrop";
+import Hero from "./pages/Hero";
 
 export const AppContext = createContext();
 
@@ -37,6 +39,7 @@ function App() {
       location.pathname !== "/tasks" &&
       location.pathname !== "/friends" &&
       location.pathname !== "/highscores" &&
+      location.pathname !== "/airdrop" &&
       location.pathname !== "/hero"
     ) {
       navigate("/home");
@@ -57,6 +60,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/highscores" element={<Highscores />} />
             <Route path="/friends" element={<Friend />} />
+            <Route path="/airdrop" element={<Airdrop />} />
+            <Route path="/hero" element={<Hero />} />
           </Routes>
         </div>
         <div className="absolute z-50 bottom-0 left-0 w-full">
