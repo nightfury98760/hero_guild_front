@@ -5,7 +5,7 @@ const TaskBar = ({
   isDaily,
   timeRemaining = "",
   checked = false,
-  claimed = false,
+  active = false,
   onClick = null,
   link = "",
 }) => {
@@ -16,11 +16,11 @@ const TaskBar = ({
   return (
     <div
       className={`pl-2 pr-4 py-2 w-full flex gap-2 justify-between items-center ${
-        claimed
+        active
           ? "bg-[url(/assets/imgs/tasks/Bar_disable.png)]"
           : "bg-[url(/assets/imgs/tasks/Bar.png)]"
       } bg-full text-sm cursor-pointer ${
-        onClick && !claimed && checked && "active:scale-95"
+        onClick && !active && checked && "active:scale-95"
       }`}
       onClick={onClick}
     >

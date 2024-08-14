@@ -85,6 +85,7 @@
   z-index: -1; /* Position the gradient behind the content */
 }
 
+<<<<<<< Updated upstream
 .border-primary-color-y {
   position: relative;
   border-image-slice: 10;
@@ -164,6 +165,8 @@
           mask-composite: exclude; /* Ensure the gradient is only applied to the border */
   z-index: -1; /* Position the gradient behind the content */
 }
+=======
+>>>>>>> Stashed changes
 
 .montserrat {
   font-family: "Montserrat", sans-serif;
